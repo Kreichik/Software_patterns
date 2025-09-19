@@ -122,7 +122,8 @@ public class Application {
         System.out.println();
     }
 
-    public static void main(String[] args) {
+    public static void tochnoNeMain(){
+//        String company = type;
         String company = "Nothing";
 
         initialize(company);
@@ -136,6 +137,10 @@ public class Application {
         initialize(company);
 
         makeOrder();
+    }
+
+    public static void main(String[] args) {
+        tochnoNeMain();
     }
 
 }
