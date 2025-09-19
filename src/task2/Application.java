@@ -1,92 +1,7 @@
 package task2;
 
-interface Device {
-    void type();
-    void brand();
-}
-
-interface Charger {
-    void power();
-    void protocols();
-}
-
-interface DeviceFactory {
-    Device createDevice();
-    Charger createCharger();
-}
-
-class OppoFactory implements DeviceFactory {
-    @Override
-    public Device createDevice() {
-        return new OppoHeadphone();
-    }
-
-    @Override
-    public Charger createCharger() {
-        return new OppoCharger();
-    }
-}
-
-class NothingFactory implements DeviceFactory {
-    @Override
-    public Device createDevice() {
-        return new NothingPhone();
-    }
-
-    public Charger createCharger() {
-        return new NothingCharger();
-    }
-}
-
-class OppoHeadphone implements Device {
-    @Override
-    public void type() {
-        System.out.println("Headphone");
-    }
-
-    @Override
-    public void brand() {
-        System.out.println("Oppo");
-    }
-}
-
-class OppoCharger implements Charger {
-    @Override
-    public void power() {
-        System.out.println("5W");
-    }
-
-    @Override
-    public void protocols() {
-        System.out.println("Quick Charge");
-    }
-}
-
-class NothingPhone implements Device {
-    @Override
-    public void type() {
-        System.out.println("Phone");
-    }
-
-    @Override
-    public void brand() {
-        System.out.println("Nothing");
-    }
-}
-
-class NothingCharger implements Charger {
-    @Override
-    public void power() {
-        System.out.println("45W");
-    }
-
-    @Override
-    public void protocols() {
-        System.out.println("Quick Charge, Power Delivery");
-    }
-}
-
-
+import task2.nothing.NothingFactory;
+import task2.oppo.OppoFactory;
 
 public class Application {
     private static DeviceFactory factory;
@@ -142,5 +57,4 @@ public class Application {
     public static void main(String[] args) {
         tochnoNeMain();
     }
-
 }
