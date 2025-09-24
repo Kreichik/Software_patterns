@@ -5,8 +5,9 @@ interface Answer {
 }
 
 class OldMegaComputer {
-    public void giveAnswer() {
-        System.out.println("42");
+    public int giveAnswer() {
+
+        return 42;
     }
 }
 
@@ -15,7 +16,8 @@ class ComputerAdapter implements Answer {
 
     @Override
     public void say() {
-        oldMegaComputer.giveAnswer();
+        int result = oldMegaComputer.giveAnswer();
+        System.out.println(result);
     }
 }
 
