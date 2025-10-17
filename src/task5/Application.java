@@ -42,13 +42,13 @@ public class Application {
                 decoratedCamera
         );
 
-        facade.startPartyMode();
+        facade.Party();
         System.out.println("Total power in Party Mode: " + facade.getTotalPowerConsumption() + "W");
 
-        facade.activateNightMode();
+        facade.Night();
         System.out.println("Total power in Night Mode: " + facade.getTotalPowerConsumption() + "W");
 
-        facade.leaveHome();
+        facade.home_alone();
         System.out.println("Total power in Away Mode: " + facade.getTotalPowerConsumption() + "W");
 
     }

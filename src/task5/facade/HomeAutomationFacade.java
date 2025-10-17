@@ -20,7 +20,7 @@ public class HomeAutomationFacade {
     }
 
 
-    public void activateNightMode() {
+    public void Night() {
         System.out.println("\n---- Activating Night Mode...");
         light.turnOff();
         System.out.println("\n");
@@ -36,7 +36,7 @@ public class HomeAutomationFacade {
         System.out.println("\n");
     }
 
-    public void startPartyMode() {
+    public void Party() {
         System.out.println("\n---- Starting Party Mode...");
         light.turnOn();
         System.out.println("\n");
@@ -60,7 +60,7 @@ public class HomeAutomationFacade {
         System.out.println("\n");
     }
 
-    public void leaveHome() {
+    public void home_alone() {
         System.out.println("\n---- Activting Away Mode...");
         light.turnOff();
         System.out.println("\n");
